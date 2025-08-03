@@ -72,7 +72,6 @@ body {
   font-family: 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif;
   line-height: 1.6;
   color: var(--dark);
-  overflow-x: hidden;
   background-color: #f5f7fa;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -1076,17 +1075,13 @@ h3 {
   display: flex;
   flex-direction: column;
   gap: var(--spacing-md);
-  width: 100%;
 }
 
 .timetable-output {
-  width: 100%;
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
   background-color: white;
+  padding: var(--spacing-md);
   border-radius: var(--radius-md);
   box-shadow: var(--shadow-sm);
-  padding: var(--spacing-md);
 }
 
 .dark-mode .timetable-output {
@@ -1125,7 +1120,6 @@ h3 {
 
 .timetable-table-container {
   width: 100%;
-  min-width: fit-content;
   overflow-x: auto;
   margin: var(--spacing-md) 0;
   border-radius: var(--radius-md);
@@ -1135,7 +1129,7 @@ h3 {
 .timetable-table {
   width: 100%;
   border-collapse: collapse;
-  table-layout: auto;
+  min-width: 600px;
 }
 
 .timetable-table th {
@@ -1144,13 +1138,11 @@ h3 {
   padding: var(--spacing-sm);
   text-align: left;
   font-weight: 500;
-  white-space: nowrap;
 }
 
 .timetable-table td {
   padding: var(--spacing-sm);
   border: 1px solid var(--light-gray);
-  white-space: nowrap;
 }
 
 .dark-mode .timetable-table td {
@@ -1163,6 +1155,11 @@ h3 {
 
 .dark-mode .timetable-table tr:nth-child(even) {
   background-color: rgba(255, 255, 255, 0.05);
+}
+
+.timetable-actions {
+  display: flex;
+  justify-content: flex-end;
 }
 
 /* Analysis History */
@@ -1309,25 +1306,6 @@ h3 {
   
   .time-input {
     max-width: 100%;
-  }
-  
-  .timetable-table {
-    display: block;
-    width: 100%;
-  }
-  
-  .timetable-table th,
-  .timetable-table td {
-    white-space: nowrap;
-    min-width: 120px;
-  }
-  
-  .timetable-section {
-    padding: var(--spacing-sm);
-  }
-  
-  .timetable-output {
-    padding: var(--spacing-sm);
   }
   
   h1 {
