@@ -184,7 +184,6 @@ function ResourceLibrary() {
   );
 }
 
-// FlashCards Component
 function FlashCards() {
   const [cards, setCards] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);
